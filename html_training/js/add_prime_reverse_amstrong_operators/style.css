@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    /* margin-top: 45vh; */
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container input {
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-family: fantasy;
+    font-size: 30px;
+    height: 50px;
+    width: 350px;
+    border: 5px solid black;
+    border-radius: 50px;
+}
+
+.container .btn {
+    margin: 20px 0px;
+    display:flex;
+    justify-content: center;
+}
+
+.container .submit_button{
+    background-color: green;
+    height: 35px;
+    width: 150px;
+    border-radius: 50px;
+    
+}

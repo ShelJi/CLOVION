@@ -1,0 +1,63 @@
+:root{
+    --bg: black;
+    --cr: white;
+}
+* {
+    color-scheme: light, dark;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--bg);
+    color: var(--cr);
+    mix-blend-mode: difference;
+}
+
+.firstDiv{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: var(--cr);
+    margin: 30px;
+    user-select: none;
+    font-size: 3em;
+    text-shadow: 3px -3px 10px ;
+}
+
+.secondDiv{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: 1s ease;
+    border-radius: 20px;
+}
+
+p{
+    background: transparent;
+    font-size: 1.3em;
+    transition: .25s ease;
+}
+
+input{
+    border: transparent;
+    outline: transparent;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+@media (prefers-color-scheme: light) {
+    :root{
+        --bg: white;
+        --cr: black;
+    }
+}

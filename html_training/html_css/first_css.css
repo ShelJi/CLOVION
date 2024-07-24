@@ -1,0 +1,104 @@
+:root{
+    --border:10px;
+    --padding:60px;
+    --margin:10px;
+    --colorBorder: #ef0303d4;
+    --colorBg:#f9f9f6d4;
+}
+body{
+    background-image:url("/img/img.jpg")
+}
+.main_first{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+
+    .first{
+        text-align: center;
+        background-color: var(--colorBg) ;
+        border: var(--border) solid var(--colorBorder);
+        padding:var(--padding);
+        margin: var(--margin);
+    }
+}
+.main_second{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+
+    .first{
+        text-align: center;
+        background-color: var(--colorBg) ;
+        border: var(--border) solid var(--colorBorder);
+        padding:var(--padding);
+        margin: var(--margin);
+    }
+    .second{
+        text-align: center;
+        background-color: var(--colorBg) ;
+        border: var(--border) solid var(--colorBorder);
+        padding:var(--padding);
+        margin: var(--margin);
+    }
+}
+.main_third{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+
+    .first{
+        text-align: center;
+        background-color: var(--colorBg) ;
+        border: var(--border) solid var(--colorBorder);
+        padding:var(--padding);
+        margin: var(--margin);
+    }
+    .second{
+        text-align: center;
+        background-color: var(--colorBg) ;
+        border: var(--border) solid var(--colorBorder);
+        padding:var(--padding);
+        margin: var(--margin);
+    }
+    .third{
+        text-align: center;
+        background-color: var(--colorBg) ;
+        border: var(--border) solid var(--colorBorder);
+        padding:var(--padding);
+        margin: var(--margin);
+    }
+}
+.main_fourth{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+
+    .first{
+        text-align: center;
+        background-color: var(--colorBg) ;
+        border: var(--border) solid var(--colorBorder);
+        padding:var(--padding);
+        margin: var(--margin);
+    }
+    .second{
+        text-align: center;
+        background-color: var(--colorBg) ;
+        border: var(--border) solid var(--colorBorder);
+        padding:var(--padding);
+        margin: var(--margin);
+    }
+    .third{
+        text-align: center;
+        background-color: var(--colorBg) ;
+        border: var(--border) solid var(--colorBorder);
+        padding:var(--padding);
+        margin: var(--margin);
+    }
+    .fourth{
+        text-align: center;
+        background-color: var(--colorBg) ;
+        border: var(--border) solid var(--colorBorder);
+        padding:var(--padding);
+        margin: var(--margin);
+    }
+}

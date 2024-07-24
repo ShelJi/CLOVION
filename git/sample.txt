@@ -1,0 +1,13 @@
+git clone <url>
+git add <filename>
+git commit -m "msg"
+git status
+git push
+git pull
+
+git commit -am "msg"  #schortcut
+
+git branch
+git checkout -b "newbranch"
+git checkout master
+git merge newbranch

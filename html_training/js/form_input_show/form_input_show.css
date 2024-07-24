@@ -1,0 +1,14 @@
+.container-fluid{
+    height: 100vh;
+    align-items: center;
+    background-color: rgb(183, 190, 231);
+}
+.result{
+    /* height: 100vh; */
+    /* display: flex;
+    justify-content: center; */
+    align-items: center;
+    margin-left: 40px;
+    align-items: center;
+    background-color: rgb(183, 190, 231);
+}

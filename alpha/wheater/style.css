@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+
+    user-select: none
+}
+
+body {
+    background: linear-gradient( in lch, skyblue, purple);
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    min-height: 60%;
+    min-width: 40%;
+    border: none;
+    margin: 10px;
+    padding: 20px;
+    background: hsla(196, 100%, 82%, 0.2);
+    border-radius: 20px;
+
+    /* box-shadow: ; */
+}
+
+.top {
+    margin: 10px 10px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 3s ease;
+
+}
+
+.top .input {
+    height: 40px;
+    width: 20%;
+    margin-left: 10px;
+    font-size: 40px;
+    border: none;
+    border-radius: 45px;
+    text-align: center;
+    background: linear-gradient(in lch , skyblue, violet);
+    outline: none;
+    color: blue;
+
+    transition: width 2s, height 2s;
+}
+
+.input::placeholder {
+    color: rgb(204, 0, 255);
+    font-size: 20px;
+}
+
+
+.top:hover .input{
+    height: 60px;
+    width: 100%;
+
+    transition: height 10ms, width 2s;
+
+}
+
+
+.top:hover .input::placeholder{
+    color: skyblue;
+    font-size: 40px;
+}
+
+.btn {
+    background: transparent;
+    border: none;
+}
+
+.top .search {
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* middle */
+
+.wrapper .middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.tempDisp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle .temp {
+    font-size: 70px;
+    color: rgb(231, 86, 231);
+    
+}
+
+.middle .name {
+    color: rgb(231, 86, 231);
+}
+
+.wrapper .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    color: #00ffe8;
+}
+
+.bottom .bottom1,
+.bottom2,
+.bottom3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

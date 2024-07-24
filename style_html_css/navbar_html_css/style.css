@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    position: fixed;
+    background-color: violet;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    z-index: 90px;
+}
+h2{
+    color: white;
+    user-select: none;
+    font-size: 4em;
+    font-weight: 900;
+}
+.navigation a{
+    position: relative;
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.navigation .btn-login-page{
+    margin-left: 10px;
+    width: 80px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: 800;
+}
+.navigation .btn-login-page:hover{
+    background: white;
+    color: black;
+    transition: .5s;
+}

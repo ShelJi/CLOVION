@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header class="header">
+        <label for="theme">Select board theme: </label>
+        <div class="select">
+          <select id="theme">
+            <option value="classic">Classic</option>
+            <option value="holiday">Holiday 🎄</option>
+            <option value="lightning">Lightning</option>
+            <option value="vibes">Total Vibes</option>
+            <option value="smiles">Smiles</option>
+            <option value="pickle">Pickle</option>
+            <option value="png">transparent.png</option>
+            <option value="debug">Debug</option>
+          </select>
+        </div>
+        <p class="warning"><strong>Theme switcher disabled.</strong> This browser does not support the CSS <code>:has()</code> function. <a href="https://caniuse.com/css-has">Review current support</a></p>
+      </header>
+      
+      <main class="scene">
+        <div class="board">
+          <span class="logo">CSS<br />is<br />awesome</span>
+          <div class="wheel"></div>
+          <div class="wheel"></div>
+          <div class="wheel"></div>
+          <div class="wheel"></div>
+          <div class="truck"></div>
+          <div class="truck"></div>
+        </div>
+      </main>
+      
+      <footer class="footer">
+        <input id="wild-mode" type="checkbox" /><label for="wild-mode">Get wild</label>
+      </footer>
+
+      <script src="js.js"></script>
+</body>
+</html>

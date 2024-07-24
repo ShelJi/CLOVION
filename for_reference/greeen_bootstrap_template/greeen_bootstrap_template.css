@@ -1,0 +1,312 @@
+/* /* top bar */
+/* icon color and hover */
+.icon-link {
+    color: grey;
+    transition: 700ms;
+}
+
+.icon-link:hover {
+    color: lightgreen;
+}
+
+/* ------------------------------- */
+
+
+/* navbar */
+/* drop down on hover */
+.dropdown:hover #dropdownId1 {
+    display: block;
+}
+
+/* deep drop down hover */
+#dropstart1:hover #dropdownId2 {
+    display: block;
+}
+
+
+/* header content hover color */
+.nav-link:active {
+    color: lightgreen !important;
+}
+
+.nav-link:hover {
+    color: lightgreen !important;
+}
+
+.dropdown-item:hover {
+    color: lightgreen !important;
+}
+
+/* ------------------------------- */
+
+
+/* carosel image  */
+.carousel-inner img {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    /* filter: brightness(.5); */
+
+}
+
+.carousel-inner .carousel-item {
+    position: relative;
+}
+
+.carousel-inner .gradient {
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+    background-color: darkgreen;
+    position: absolute;
+    filter: brightness(.5);
+
+}
+
+/* image text centering */
+.carousel-caption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+/* image text animation by anime.css */
+.carousel-caption h2 {
+    --animate-duration: 2s;
+}
+
+.carousel-caption p,
+a {
+    --animate-duration: 3s;
+}
+
+.carousel-indicators [data-bs-target] {
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+}
+
+
+
+#About .container {
+    margin: 0px;
+    padding: 0px;
+}
+
+.first {
+    margin: 40px;
+    padding: 40px;
+}
+
+.second {
+    margin: 40px;
+    padding: 40px;
+}
+
+.third {
+    margin: 40px;
+    padding: 40px;
+}
+
+/* ------------------------------- */
+
+
+/* row gutters */
+#gutters {
+    margin-top: 50px;
+    /* padding: 10px; */
+}
+
+#gutters .inner-col {
+    text-align: left;
+}
+
+#gutters a {
+    text-decoration: none;
+}
+
+#gutters h1 {
+    text-transform: uppercase;
+    color: black;
+}
+
+#gutters h1:hover {
+    color: lightgreen;
+}
+
+/* ------------------------------- */
+
+
+
+/* gutters second */
+#gutters-second {
+    margin: auto;
+    padding: 40px;
+}
+
+#gutters-second .inner-col {
+    text-align: left;
+}
+
+#gutters-second a {
+    text-decoration: none;
+}
+
+#gutters-second h1 {
+    margin: 20px;
+    text-transform: uppercase;
+    color: black;
+}
+
+#gutters-second h2 {
+    margin: 20px;
+    font-size: 25px;
+    color: lightgreen;
+}
+
+#gutters-second p {
+    margin: 20px;
+}
+
+/* ------------------------------- */
+
+
+/* gutters third */
+#gutters-third {
+    margin: auto;
+    padding: 40px;
+}
+
+#gutters-third h1 {
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-size: larger;
+    font-weight: lighter;
+}
+
+#gutters-third p {
+    margin-bottom: 50px;
+}
+
+/* ------------------------------- */
+
+
+/* call to action */
+
+#call-action {
+    height: 300px;
+    width: 100%;
+    padding: 100px;
+    /* display: flex; */
+    /* box-sizing: border-box; */
+    background-color: #5cb874;
+    /* text-align: center; */
+}
+
+#call-action div {
+    display: flex;
+
+}
+
+#call-action .btn {
+    margin-left: 100px !important;
+    height: 55px;
+    width: 150px;
+
+}
+
+@media(max-width:1000px) {
+    #call-action {
+        height: 450px;
+        padding: 10px;
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    #call-action div {
+        display: contents;
+    }
+
+    #call-action .btn {
+        margin-left: auto !important;
+    }
+}
+
+/* ------------------------------- */
+
+/* card */
+/* card image */
+.profile-area img {
+
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+
+/* ------------------------------- */
+
+/* contact */
+#Contact #row-col1 {
+    border-radius: 0%;
+    border-top: 5px lightgreen solid;
+    border-bottom: 5px lightgreen solid;
+    border-left: 10px transparent;
+    border-right: 10px transparent;
+}
+
+#Contact #row-col2 {
+
+    border-radius: 0%;
+    border-top: 5px lightgreen solid;
+    border-bottom: 5px lightgreen solid;
+    border-left: 10px transparent;
+    border-right: 10px transparent;
+}
+
+
+/* ------------------------------- */
+
+/* footer */
+#footer {
+    height: 300px;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+footer .icon-link {
+    color: white;
+    transition: 700ms;
+}
+
+footer .icon-link:hover {
+    color: white;
+}
+
+footer a:hover {
+    background-color: green;
+}
+
+footer a {
+    height: 45px;
+    width: 45px;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgreen;
+    /* border: 0px white solid; */
+    border-radius: 50%;
+}
+
+
+/* ------------------------------- */
+
+/* bact to top */
+#backtotop {
+    position: fixed;
+}
+
+
+/* ------------------------------- */

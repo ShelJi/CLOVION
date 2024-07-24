@@ -1,0 +1,90 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, tomato, skyblue, lightgreen, crimson);
+}
+
+.container {
+    height: 700px;
+    /* background: linear-gradient(30deg, violet, blue, red, orange, pink); */
+    background-color: rgba(196, 72, 220, 0.4);
+    border-radius: 20px;
+}
+
+h1 b {
+    text-transform: uppercase;
+    color: rebeccapurple;
+    opacity: 65%;
+    user-select: none;
+}
+
+#display {
+
+    background-color: transparent;
+    border: none;
+    font-size: 50px !important;
+    color: darkviolet;
+    font-weight: 500;
+}
+
+#display::placeholder {
+    color: darkviolet;
+}
+
+#input {
+    border: none !important;
+    border-color: none !important;
+    box-shadow: none !important;
+
+}
+
+input[type="text"]:focus {
+    border: none !important;
+    border-color: none !important;
+    box-shadow: none !important;
+}
+
+#inputbox .row,
+.col,
+.col-6,
+.col-9,
+col-8 {
+    height: 70px;
+    border: none;
+}
+
+button {
+    margin: 10px;
+    /* border: 10px; */
+
+    user-select: none;
+
+    align-items: center;
+    background: linear-gradient(36deg, rebeccapurple, skyblue, pink, rebeccapurple);
+    /* backdrop-filter: ; */
+
+    box-shadow: none !important;
+    box-sizing: border-box;
+    outline: none;
+    outline: 0;
+    border-radius: 6px;
+    color: rebeccapurple;
+    display: inline-flex;
+    justify-content: center;
+
+    background-color: green;
+
+}
+
+.row {
+    margin: 10px;
+}

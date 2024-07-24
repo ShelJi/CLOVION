@@ -1,0 +1,23 @@
+.container{
+    margin: 30px;
+    /* display: flex; */
+    
+}
+
+label{
+
+    display: flexbox;
+}
+
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table{
+    max-width: 90%;
+    display: none;
+    margin: 10px 50px ;
+}
