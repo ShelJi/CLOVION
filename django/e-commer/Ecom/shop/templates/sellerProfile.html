@@ -1,0 +1,85 @@
+{% extends 'includes/base.html' %}
+
+{% block body %}
+  {% include 'includes/navbar.html' %}
+
+  <div class="container mt-2">
+    <div class="container d-flex justify-content-between mb-3">
+      <h1>User: {{ usersigned }}</h1>
+      <div>
+        <a href="{% url 'shop:sellerpage' id %} " class="text-decoration-none text-dark">
+          <button class="btn btn-success m-2">Add new</button>
+        </a>
+        <a href="{% url "shop:home" %}">
+          <button class="btn btn-info">Sign Out</button>
+        </a>
+      </div>
+    </div>
+
+    <table class="table table-striped table-hover table-borderless align-middle table-success ">
+      <thead >
+        <tr>
+          <th scope="col">Number</th>
+          <th scope="col">Product name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Discount price</th>
+          <th scope="col">Actual Price</th>
+          <th scope="col">Stocks Left</th>
+          <th scope="col">Image</th>
+          <th scope="col">Trending</th>
+          <th scope="col">Category</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+
+      <tbody class="table table-group-divider">
+        
+        {% for detail in details %}
+          <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ detail.product_name }}</td>
+            <td>{{ detail.description }}</td>
+            <td>{{ detail.discount_price }}</td>
+            <td>{{ detail.actual_price }}</td>
+            <td>{{ detail.stock }}</td>
+
+            <td>
+              {% if detail.image %}
+                <img src="{{ detail.image.url }}" height="100px" width="100px"/>
+              {% else %}
+              <div style="height: 100px; width: 100px;">
+                <span><b>No image set</b></span>
+              </div>
+              {% endif %}
+            </td>
+
+            <td>
+              <input type="checkbox" name="trending" class="form-check"
+              {% if detail.trending %} 
+                checked 
+              {% else %}
+                disabled
+              {% endif %}>
+            </td>
+            <td>
+              <label class="form-label">
+                {{detail.category}}
+              </label>
+            </td>
+            <td>
+              <a href="{% url 'shop:selleredit' detail.id %}" class="text-decoration-none"><button class="btn btn-info">Edit</button></a>
+            </td>
+
+            <td>
+              <a href="{% url 'shop:productDelete' detail.id %}" class="text-decoration-none"><button class="btn btn-danger">Delete</button></a>
+            </td>
+
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    {{ form.as_table }}
+  </div>
+{% endblock %}

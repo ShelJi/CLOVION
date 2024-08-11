@@ -1,0 +1,12 @@
+{% extends "includes/base.html" %}
+
+{% block body %}
+{% include "includes/navbar.html" %}
+
+<h1>im profile</h1>
+<form method="post">
+    {% csrf_token %}
+    <button class="btn btn-danger" name="logout">Log Out</button>
+</form>
+
+{% endblock body %}

@@ -1,0 +1,50 @@
+{% extends 'includes/base.html' %}
+
+{% block body %}
+  {% include 'includes/navbar.html' %}
+
+  <div class="container">
+    <h1>Trending</h1>
+    {% comment %}carousel{% endcomment %}
+    <div class="carousel slide carousel-fade" id="trending" data-bs-ride="carousel">
+      {% comment %}images section carousel inner{% endcomment %}
+      <div class="carousel-inner">
+        {% comment %}first img{% endcomment %}
+
+        <div class="carousel-item active">
+          <div class="gradient"></div>
+          <img src="http://picsum.photos/200" class="d-block w-100" height="400rem" alt="" />
+
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+
+        {% for trend in trending %}
+          <div class="carousel-item">
+            <div class="gradient"></div>
+            <img src="{{ trend.image.url }}" class="d-block w-100" height="400rem" alt="" />
+
+            <div class="carousel-caption d-none d-md-block">
+              <h1>{{ trend.product_name }}</h1>
+              <p>{{ trend.description }}</p>
+              <h3>{{ trend.discount_price }}</h3>
+              <h4>{{ trend.actual_price }}</h4>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      {% comment %}carousel buttons previous{% endcomment %}
+      <button class="carousel-control-prev" type="button" data-bs-target="#trending" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      {% comment %}carousel button next{% endcomment %}
+      <button class="carousel-control-next" type="button" data-bs-target="#trending" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+{% endblock %}

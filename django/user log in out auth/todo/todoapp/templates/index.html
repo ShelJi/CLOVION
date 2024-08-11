@@ -1,0 +1,53 @@
+{% extends 'includes/base.html' %}
+
+{% block body %}
+  {% include 'includes/navbar.html' %}
+
+  <form class="container d-flex flex-column align-items-center" method="post">
+    {% csrf_token %}
+
+    {% if messages %}
+      <ul class="alert alert-info">
+        {% for message in messages %}
+          <li class="{{ message.tag }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <h1>To-Do-Here_Do-It-There</h1>
+
+    {{ form.as_p }}
+    <button class="btn btn-info">ADD</button>
+
+    <div class="container">
+      {% if tasks %}
+        <h2>Your Tasks</h2>
+        <ul class="list-group">
+          {% for task in tasks %}
+            <li class="list-group-item">
+              <div class="container d-flex justify-content-between align-items-center">
+                <div class="">
+                  {{ task.task }} -------{% if task.status %}
+                    Done
+                  {% else %}
+                    Pending
+                  {% endif %}
+                </div>
+                <div>
+                    {% if task.status %}
+                    <a href="{% url 'edit' task.id %}" class="btn btn-outline-primary">o_0 Again</a>
+                    {% else %}
+                    <a href="{% url 'edit' task.id %}" class="btn btn-outline-primary">Complete</a>
+                    {% endif %}
+                  <a href="{% url 'delete' task.id %}" class="btn btn-danger">DELETE</a>
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No tasks available.</p>
+      {% endif %}
+    </div>
+  </form>
+{% endblock %}

@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    background-image: linear-gradient(green, blue, yellow, tomato, pink);
+    background-clip: border-box; /* If you want the gradient to cover the border area */
+}
+
+.card_box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
+    grid-template-rows: repeat(2, auto);  /* 2 rows, height auto to fit content */
+    gap: 1rem; /* Space between the cards */
+    padding: 1rem; /* Optional: padding around the grid */
+    box-sizing: border-box;
+}
+
+.card {
+    padding: 1rem;
+    border: 1rem solid black;
+    /* Optional: To ensure cards maintain a consistent size and appearance */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    height: 20rem;
+    width: 10rem;
+    object-fit: cover; /* Ensures images cover the area while maintaining their aspect ratio */
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
+    .card img {
+        height: 15rem;
+        width: 7.5rem;
+    }
+    .card {
+        padding: 0.5rem;
+    }
+}

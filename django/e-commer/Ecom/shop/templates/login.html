@@ -1,0 +1,55 @@
+{% extends 'includes/base.html' %}
+
+{% block body %}
+  {% include 'includes/navbar.html' %}
+
+  <div class="loginPage">
+    <div class="wrapper">
+      <form method="post">
+        {% csrf_token %}
+
+        <h1>{{ topic|upper }}</h1>
+        <div class="input-box">
+          <input type="text" placeholder="Username" required name="name" />
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Password" required name="password" />
+        </div>
+
+        
+        <button type="submit" class="button mb-3">Login</button>
+        {% if id %}
+    
+        <button type="submit" class="button mb-3"><a href="{% url 'shop:sellerpage' id %}">Login</a></button>
+        {% endif %}
+
+        {% if userLoggedin %}
+          <div class="alert alert-danger alert-dismissible" role="alert">
+            <div>{{ userLoggedin }}</div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endif %}
+
+        <p class="register-link">
+          {% if topic == 'seller login' %}
+            Don't have an account?
+            <a href="{% url 'shop:newseller' %}">New Seller Register</a>
+          {% elif topic == 'new user' or topic == 'seller register' %}
+
+          {% else %}
+            Don't have an account?
+            <a href="{% url 'shop:register' %}">Register</a>
+          {% endif %}
+        </p>
+        <p class="register-link">
+          {% if topic == 'seller login' %}
+
+          {% else %}
+            Seller Login
+            <a href="{% url 'shop:seller' %}">Login</a>
+          {% endif %}
+        </p>
+      </form>
+    </div>
+  </div>
+{% endblock %}
