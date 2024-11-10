@@ -1,0 +1,2 @@
+ we can ignore files without uploading to github by creating .gitignore file and add text from chrome-> gitignore generator -> django -> generate -> copy paste
+
