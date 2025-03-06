@@ -1,0 +1,9 @@
+ we can ignore files without uploading to github by creating .gitignore file and add text from chrome-> gitignore generator -> django -> generate -> copy paste
+
+git init
+git add -A
+git status
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ShelJi/create-custom-cammand-django-.git
+git push -u origin main
