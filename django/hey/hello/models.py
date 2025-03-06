@@ -8,4 +8,6 @@ class Wow_model(models.Model):
     age = models.IntegerField()
     address = models.TextField()
     
-    img = models.ImageField(upload_to = "img", null = True) #null = True should be used on after added values
+    img = models.ImageField(upload_to = "img") # null = True should be used on after added values
+
+    # description = models.TextField(null=True, blank=True)

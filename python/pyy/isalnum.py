@@ -1,4 +1,4 @@
-# Certainly! In Python, the isalnum() method is 
+# The isalnum() method is 
 # a string method that checks whether all the 
 # characters in a string are alphanumeric. Here’s 
 # a breakdown of what it does:

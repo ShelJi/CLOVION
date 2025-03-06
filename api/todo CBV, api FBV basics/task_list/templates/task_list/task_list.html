@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Task List</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f4f4f4;
+				margin: 20px;
+			}
+			h1 {
+				color: #333;
+			}
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				margin: 20px 0;
+			}
+			table,
+			th,
+			td {
+				border: 1px solid #ddd;
+			}
+			th,
+			td {
+				padding: 8px;
+				text-align: left;
+			}
+			th {
+				background-color: #f2f2f2;
+			}
+		</style>
+	</head>
+	<body>
+		{{ request.user }} {% if request.user.is_authenticated %}
+		<form action="{% url 'task_list:logout' %}" method="post">
+			{% csrf_token %}
+			<button>LOGOUT</button>
+		</form>
+		{% else %}
+		<a href="{% url 'task_list:login' %}">login</a>
+		{% endif %}
+		<h1>Task List</h1>
+		{{ object_list }}<br />
+		{{ tasks }}
+		<a href="{% url 'task_list:task-create' %}"><button>create task</button></a>
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>user</th>
+					<th>Task title</th>
+					<th>Description</th>
+					<th>complete</th>
+					<th>created</th>
+					<th>edit</th>
+					<th>del</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for task in object_list %}
+				<tr>
+					<td>{{ task.id }}</td>
+					<td>{{ task.user }}</td>
+					<td>{{ task.title }}</td>
+					<td>{{ task.description }}</td>
+					<td>{{ task.complete }}</td>
+					<td>{{ task.created }}</td>
+					<td><a href="{% url 'task_list:task-edit' task.id %}">edit</a></td>
+					<td><a href="{% url 'task_list:task-del' task.id %}">delete</a></td>
+				</tr>
+				{% empty %}
+				<p>No tasks available.</p>
+				{% endfor %}
+			</tbody>
+		</table>
+	</body>
+</html>

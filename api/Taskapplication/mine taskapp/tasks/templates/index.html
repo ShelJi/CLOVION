@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hey tasks</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f5;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        color: #333;
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+      a {
+        text-decoration: none;
+        color: #007bff;
+        font-size: 1.2em;
+        margin-right: 15px;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        margin-top: 20px;
+      }
+      input[type="text"] {
+        padding: 10px;
+        font-size: 1em;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      button {
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+      }
+      button:hover {
+        background-color: #218838;
+      }
+      div {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>heyy</h1>
+    {% if user.is_authenticated %}
+    <h1>
+      hello {{ user.username }}
+      <a href="{% url 'logout' %}">logout</a>
+    </h1>
+    {% endif %}
+    <a href="{% url 'login' %}">login</a>
+    <a href="{% url 'signup' %}">signup</a>
+    <div>
+      <h1>tasks</h1>
+      <form action="{% url 'task' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="task_name" />
+        <button>add</button>
+      </form>
+    </div>
+
+    {% if messages %} {% for msg in messages %}
+    <h1>{{ msg }}</h1>
+    {% endfor %} {% endif %} {% include "tasks.html" %}
+  </body>
+</html>

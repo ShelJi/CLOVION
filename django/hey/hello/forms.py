@@ -1,15 +1,16 @@
-from django.forms import ModelForm
+# from django.forms import ModelForm
 from hello.models import Wow_model
 from django import forms
 
 from django.contrib.auth.models import User
 
-class Wow_form(ModelForm):
+class Wow_form(forms.ModelForm):
     class Meta:
         model = Wow_model
         fields = "__all__"
+        # fields = ["name", "age"]
 
-class User_auth(ModelForm):
+class User_auth(forms.ModelForm):
     class Meta:
         model = User
         fields = ["username", "password", "email"]

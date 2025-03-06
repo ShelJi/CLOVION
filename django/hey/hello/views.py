@@ -101,3 +101,14 @@ class LogoutView(View):
     def post(self, request):
         logout(request)
         return redirect(reverse("home"))
+    
+    
+    
+    
+from .models import Wow_model
+
+
+def create(request):
+    if request.method == "POST":
+        name= request.POST.get["name"]
+        Wow_model.objects.create(name=name, )

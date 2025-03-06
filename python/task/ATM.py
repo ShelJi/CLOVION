@@ -3,15 +3,17 @@ user_data = {
     "joel"    : 3813,
     "sree"    : 1234,
     "shyju"   : 1111,
+    "jerin"   : 1510
 }
 user_balance = {
     "sheljin" : 100,
     "joel"    : -105,
     "sree"    : 1000,
-    "shyju"   : 1000
+    "shyju"   : 1000,
+    "jerin"   : 50
 }
 
-class atm_machine:
+class ATMMachine:
     def __init__(self):
         self.user_name = input("Enter user name: ")
         self.user_pass = input("Enter pass: ")
@@ -95,4 +97,4 @@ class atm_machine:
     def thankyou(self):
         print("Thank you for using the ATM😊")
 
-atm = atm_machine()
+atm = ATMMachine()

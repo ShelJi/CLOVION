@@ -1,0 +1,18 @@
+{% for data in datas %}
+<div class="task-item">
+  <h4>{{ forloop.counter }}</h4>
+  <p><strong>Task:</strong> {{ data.task_name }}</p>
+  <p><strong>Created on:</strong> {{ data.task_created }}</p>
+
+  <label>
+    <input type="checkbox" {% if data.task_status %}checked{% endif %} />
+    <a href="{% url 'edit' data.id %}"
+      >Mark as {{ data.task_status|yesno:'Incomplete,Complete' }}</a
+    >
+  </label>
+
+  <button class="delete-btn">
+    <a href="{% url 'delete' data.id %}">Delete</a>
+  </button>
+</div>
+{% endfor %}

@@ -1,3 +1,5 @@
+from icecream import ic
+
 # String manipulation refers to the process of modifying, parsing, 
 # and analyzing strings in programming. Strings are sequences of 
 # characters, and manipulating them is a common task in software 

@@ -1,7 +1,5 @@
 class student:
-
     def __init__ (Self ,name, id, age, std):
-
         Self.name = name
         Self.id = id
         Self.age = age
