@@ -1,2 +1,0 @@
-user auth sign in using
-from django.contrib.auth import authenticate, login, logout
