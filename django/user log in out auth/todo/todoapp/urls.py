@@ -8,4 +8,6 @@ urlpatterns = [
     path('logout/', views.LogoutView.as_view(), name='logout'),
     path('edit/<id>', views.EditView.as_view(), name='edit'),
     path('<id>/delete/', views.DeleteView.as_view(), name='delete'),
+
+    # path('register-fbv/', views.)
 ]

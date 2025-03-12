@@ -7,6 +7,16 @@
 
     <b><span class="d-flex justify-content-center mb-5 text-success">{{ topic|upper }}</span></b>
 
+    {% if form.errors %}
+    <ul>
+      {% comment %} {% for message in form.errors %} {% endcomment %}
+        <li class="">{{ form.errors }}</li>
+        <li class="">{{ form.username }}</li>
+        <li class="">{{ form.password }}</li>
+      {% comment %} {% endfor %} {% endcomment %}
+    </ul>
+    {% endif %}
+
     {% if messages %}
       <ul>
         {% for message in messages %}
