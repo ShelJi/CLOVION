@@ -1,1 +1,2 @@
 todo app using django user auth in CBV (Class Based View)
+FBV added
